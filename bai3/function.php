@@ -25,3 +25,25 @@ function show_name_4($name, $age, $address = 'HN') {
 }
 
 show_name_4('t3h', '10');
+
+
+function sum($a , $b) {
+    return $a + $b;
+}
+
+$c = sum(3,4);
+
+echo $c;
+
+$a = ' T3H';
+var_dump($a);
+$b = trim(' T3H');
+var_dump($b);
+
+$str = 'trung,tam,t3h';
+$d = explode(',', $str);
+print_r($d);
+
+$e = implode(',', $d);
+print_r($e);
+
