@@ -114,7 +114,6 @@
     } else {
         include_once 'home.php';
     }
-
 ?>
 
 <!-- LATEST-NEWS-AREA END -->
