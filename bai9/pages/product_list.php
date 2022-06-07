@@ -35,16 +35,18 @@
                             <th>Số Lượng</th>
                             <th>Hành Động</th>
                         </tr>
-                        <tr>
-                            <td>183</td>
-                            <td>John Doe</td>
-                            <td>11-7-2014</td>
-                            <td><span class="label label-success">Approved</span></td>
+                        <?php foreach ($arrProducts as $product):?>
+                        <tr class="product-<?= $product[0] ?>">
+                            <td><?= $product[0] ?></td>
+                            <td><?= $product[1] ?></td>
+                            <td><?= number_format($product[2],0,',','.') ?>đ</td>
+                            <td><?= $product[3] ?></td>
                             <td>
                                 <button type="button" class="btn btn-primary btn-sm">Sửa</button>
-                                <button type="button" class="btn btn-danger btn-sm">Xóa</button>
+                                <button data-id="<?= $product[0] ?>" type="button" class="btn btn-danger btn-sm btnDelete">Xóa</button>
                             </td>
                         </tr>
+                        <?php endforeach; ?>
                     </table>
                 </div>
                 <!-- /.box-body -->
