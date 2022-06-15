@@ -3,13 +3,15 @@ class ConNguoi
 {
     // Khai bai thuoc tinh <=> đặc điểm của nhóm đối tượng
     // property
-    public $name = 'T3H';
+    public $name;
     protected $age = 15;
     private $address = 'Cầu giấy,Hà Nội';
 
-    // hàm khởi tạo
-    public function __construct()
+    // hàm khởi tạo - được gọi khi một đối tượng được khởi tạo
+    public function __construct($name = '', $age = '')
     {
+        $this->name = $name;
+        $this->age = $age;
         echo 'hàm khởi tạo chạy'.'<br>';
     }
 
@@ -52,8 +54,8 @@ class ConNguoi
     }
 }
 
-//$objectA = new ConNguoi(); // khởi tạo một đối tượng mới
-//echo $objectA->name.'<br>';
+$objectA = new ConNguoi('T3HH', 31); // khởi tạo một đối tượng mới
+echo $objectA->name.'<br>';
 //echo $objectA->showName().'<br>';
 
 // Không thể gọi đến  thuộc tính được khai báo là protected / private ngoài phạm vi lớp
@@ -63,7 +65,7 @@ class ConNguoi
 // $objectA->showAge();
 
 // Có thể gọi tới thuộc tính / phương thức có phạm vị là protectd / privated thông qua hàm public
-//echo $objectA->showAgePublic().'<br>';
+echo $objectA->showAgePublic().'<br>';
 //echo $objectA->showAddressPrivate().'<br>';
 
 
